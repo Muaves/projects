@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GBRR's pédzs | projects</title>
+  <link href="https://fonts.cdnfonts.com/css/archivo-narrow-3" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="../minecraft_title.png">
+  <link rel="stylesheet" href="pro.css">
+</head>
+<body>
+  <header>
+    <nav id="navbar">
+      <div class="navma">
+        <a href="https://muaves.github.io/main" style="color: #00bcd4;"><b>Vissza</b></a>
+      </div>
+      <div class="navma">
+        <a href="https://youtube.com/muaves" style="color: #00bcd4;" target="_blank"><b>YouTube</b></a>
+      </div>
+      <div class="navma">
+        <a href="https://discord.gg/28NkCSzQ" style="color: #00bcd4;" target="_blank"><b>Discord</b></a>
+      </div>
+      <div class="navma">
+        <input type="text" id="searchInput" placeholder="Keresés..." oninput="searchAndScroll()">
+      </div>
+    </nav>
+  </header>
+
+  <div class="profile">
+    <br>
+    <h1>Projekteim:</h1>
+  </div>
+
+  <div class="projects-container">
+    <div class="project-card" id="protiers">
+      <div class="project-title">ProTiers</div>
+      <div class="project-desc">PvP Discord + weboldal rangsorokkal.</div>
+      <div class="project-links">
+        <a href="https://protiers.github.io/tiers" target="_blank">Weboldal</a>
+        <a href="https://discord.gg/HcYEGWnFB7" target="_blank">Discord</a>
+      </div>
+    </div>
+
+    <div class="project-card" id="ezcraft">
+      <div class="project-title">EzCraft</div>
+      <div class="project-desc">Minecraft economy szerver</div>
+      <div class="project-links">
+        <a href="https://protiers.github.io/ezcraft" target="_blank">Weboldal</a>
+      </div>
+    </div>
+
+    <div class="project-card" id="amongcraft">
+      <div class="project-title">AmongCraft</div>
+      <div class="project-desc">AmongUs a Minecraft-ban <a href="https://tggamesyt.dev" target="_blank">TGGamesYT</a>-től</div>
+      <div class="project-links">
+        <a href="https://tggamesyt.dev/projects" target="_blank">Weboldal</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function searchAndScroll() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const map = {
+        "protiers": "protiers",
+        "ezcraft": "ezcraft",
+        "amongcraft": "amongcraft",
+      };
+      if (map[input]) {
+        const target = document.getElementById(map[input]);
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }
+    }
+  </script>
+  <footer>
+    <p>© 2025 Muaves. Minden jog fenntartva.</p>
+  </footer>
+</body>
+</html>
